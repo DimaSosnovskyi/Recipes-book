@@ -1,0 +1,18 @@
+<div class='row'>
+    <div class='col-xs-12'>
+        <!-- <label>New Recipe</label>
+        <input type='text' (input) = 'getRecipe($event)'>
+        <input type='text' (input) = 'getDescription($event)'>
+        <input type='text' (input) = 'getImg($event)'> -->
+        <button class='btn btn-success'>
+            New app-recipe-item</button>
+            <!-- <p *ngIf='isRecipe'>{{newRecipe}}</p> -->
+    </div>
+</div>
+  <div class='row'>
+    <div class='col-xs-12'>
+      <app-recipe-item [recipesList] = 'recipes' ></app-recipe-item>
+    </div>
+</div>
+
+
