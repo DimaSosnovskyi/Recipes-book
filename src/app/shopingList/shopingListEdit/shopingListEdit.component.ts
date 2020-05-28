@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef, EventEmitter, Output } from '@angular/core';
 
 @Component ({
     selector: 'app-shopingListEdit',
@@ -6,4 +6,15 @@ import { Component } from '@angular/core';
     styleUrls: ['./shopingListEdit.component.css']
 })
 
-export class ShopingListEdit {}
+export class ShopingListEdit {
+    @ViewChild ('nameInput', { static: true}) nameInput: ElementRef;
+    @ViewChild ('amountInput', { static: true}) amountInput: ElementRef;
+    @Output() recepiIngredients = new EventEmitter<{name: string, amount: number}>();
+    public onAddButton (): void {
+        this.recepiIngredients.emit({
+            name: this.nameInput.nativeElement.value,
+            amount: this.amountInput.nativeElement.value
+        })
+        console.log(this.nameInput.nativeElement.value,this.amountInput.nativeElement.value);
+    }
+}

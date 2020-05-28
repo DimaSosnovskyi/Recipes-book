@@ -11,8 +11,11 @@ import { Component } from '@angular/core';
 })
 
 export class ShopingList {
-    ingredients: Ingrediants[] =  [
-        new Ingrediants ('apples',5),
-        new Ingrediants('tomato',10)
-    ];
+  ingredients: Ingrediants[] =  [
+    new Ingrediants ('apples',5),
+    new Ingrediants('tomato',10)
+  ];
+  public newIngredients (recepiIngedient: { name: string, amount: number}): void {
+    this.ingredients.push(new Ingrediants (recepiIngedient.name,recepiIngedient.amount));
+  }
 }
