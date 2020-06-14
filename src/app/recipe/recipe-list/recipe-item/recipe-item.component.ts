@@ -7,6 +7,7 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./recipe-item.component.css']
 })
 export class RecipeItemComponent implements OnInit {
+  public isRecepi: boolean = false;
   @Input() recipe: Recipe;
   @Output() selectedItem = new EventEmitter<void>();
   constructor() { }
@@ -15,6 +16,5 @@ export class RecipeItemComponent implements OnInit {
   }
   public onSelectedItem (): void {
     this.selectedItem.emit();
-    console.log('work');
   }
 }
