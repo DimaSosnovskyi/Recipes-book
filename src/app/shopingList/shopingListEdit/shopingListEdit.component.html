@@ -8,6 +8,7 @@
                         class='form-control'
                         id='name'
                         type='text'
+                        #nameInput
                     >
                 </div>
                 <div class='col-sm-2 form-group'>
@@ -15,14 +16,16 @@
                     <input 
                         class='form-control'
                         type='text'
-                        id='amount'>
+                        id='amount'
+                        #amountInput>
                 </div>
             </div>
             <div class='row'>
                 <div class='col-xs-12'>
                     <button 
+                        (click) = 'onAddButton()'
                         class='btn btn-success'
-                        type='submit'>
+                        type='button'>
                         Add
                     </button>
                     <button 

@@ -1,3 +1,6 @@
+import { ShopingListService } from './shared/services/shoping-list.service';
+import { RecepiListService } from 'src/app/shared/services/recepiList.service';
+import { DropDownDirective } from './shared/dropdown.directive';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
@@ -26,14 +29,15 @@ import { HeaderComponent } from './Header/Header.component';
     RecipeItemComponent,
     RecipeDetailComponent,
     RecipeComponent,
-    ModelComponent
+    ModelComponent,
+    DropDownDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [RecepiListService,ShopingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
