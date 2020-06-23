@@ -21,7 +21,7 @@
                 <span class='caret'></span>
             </button>
             <ul class='dropdown-menu'>
-                <li><a href='#'>To shoping list</a></li>
+                <li><a (click) = 'onToShopingList()' href='#'>To shoping list</a></li>
                 <li><a href='#'>Edit Recipe</a></li>
                 <li><a href='#'>Delete Recipe</a></li>
             </ul>
@@ -35,6 +35,14 @@
 </div>
 <div class='row'>
     <div class='col-xs-12'>
-        ingredients
+        ingredients:
+        <ul class='list-group'>
+            <li
+            [style.max-width] = "'130px'"
+            class = 'list-group-item'
+            *ngFor = 'let ingredient of recepi.ingredients'>
+            {{ ingredient.name }} {{ ingredient.amount }}
+            </li>
+        </ul>
     </div>
 </div>

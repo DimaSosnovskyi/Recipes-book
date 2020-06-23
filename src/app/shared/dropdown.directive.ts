@@ -4,13 +4,6 @@ import { Directive, Renderer2, ElementRef, OnInit, HostListener, HostBinding } f
   selector: '[appDropDown]'
 })
 export class DropDownDirective implements OnInit {
-  // @Input() set appDropDown(condition) {
-  //   if (condition) {
-  //     this.vcRef.createEmbeddedView(this.templateRef);
-  //   } else {
-  //     this.vcRef.clear();
-  //   }
-  // }
   @HostBinding('class.open') isOpen: boolean = false;
   @HostListener('click') click(eventData: Event) {
     this.isOpen = !this.isOpen;
@@ -18,9 +11,6 @@ export class DropDownDirective implements OnInit {
   constructor(
     public renderer: Renderer2,
     public elementRef: ElementRef,
-  
-    // public templateRef: TemplateRef<any>,
-    // public vcRef: ViewContainerRef
     ) {}
     ngOnInit() {
 

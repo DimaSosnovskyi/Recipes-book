@@ -1,3 +1,5 @@
+import { ShopingListService } from './shared/services/shoping-list.service';
+import { RecepiListService } from 'src/app/shared/services/recepiList.service';
 import { DropDownDirective } from './shared/dropdown.directive';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -35,7 +37,7 @@ import { HeaderComponent } from './Header/Header.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [RecepiListService,ShopingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

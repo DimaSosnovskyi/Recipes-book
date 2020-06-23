@@ -20,14 +20,10 @@ export class RecipeListComponent implements OnInit {
   ngOnInit(): void {
     this.recipes = this.recepiList.recipes;
   }
-  // public selectedRecipe (recepi): void {
-  //   this.recepiInfo.emit(recepi);
+
+  // onClick() {
+  //   this.recipes.push(new Recipe (this.newRecipe, this.newDescription,this.newImg))
   // }
-
-
-  onClick() {
-    this.recipes.push(new Recipe (this.newRecipe, this.newDescription,this.newImg))
-  }
 
   getRecipe (event: Event) {
     this.newRecipe = (<HTMLInputElement>event.target).value;
