@@ -1,3 +1,4 @@
+import { RecepiListService } from './../../../shared/services/recepiList.service';
 import { Recipe } from './../../recipe.modul';
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
@@ -8,13 +9,11 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 })
 export class RecipeItemComponent implements OnInit {
   @Input() recipe: Recipe;
-  @Output() selectedItem = new EventEmitter<void>();
-  constructor() { }
+  constructor(public recipeListService: RecepiListService) { }
 
   ngOnInit(): void {
   }
   public onSelectedItem (): void {
-    this.selectedItem.emit();
-    console.log('work');
+    this.recipeListService.selectedRecepi.emit(this.recipe);
   }
 }
