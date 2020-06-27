@@ -28,7 +28,6 @@ export class RecepiListService {
     return this.recipes.slice();
   }
   public addIngredientsToShopingList(ingredients: Ingrediants[]): void {
-    console.log(ingredients);
     this.sLService.addIngredients(ingredients);
   }
 } 

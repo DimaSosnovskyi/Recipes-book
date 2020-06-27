@@ -1,6 +1,7 @@
-import { DropDownDirective } from './shared/services/directives/drop-down.directive';
+
 import { ShopingListService } from './shared/services/shoping-list.service';
-import { RecepiListService } from './shared/services/recepiList.service';
+import { RecepiListService } from 'src/app/shared/services/recepiList.service';
+import { DropDownDirective } from './shared/dropdown.directive';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
